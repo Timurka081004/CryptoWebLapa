@@ -1,0 +1,133 @@
+/* styles_main.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 120px; /* Increase logo width */
+    height: auto;
+    border-radius: 50%; /* Add circular border */
+    border: 2px solid #fff; /* Set white border */
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+    transform: scale(1.1);
+}
+
+h2 {
+    color: #333;
+    margin: 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #4caf50;
+}
+
+.main-container {
+    margin-top: 20px;
+    padding: 0 20px; /* Add padding for container */
+}
+
+table {
+    width: 100%; /* Table width to fit container */
+    border-collapse: collapse; /* Remove spacing between cells */
+}
+
+th, td {
+    border: 1px solid #ccc; /* Cell borders */
+    padding: 8px; /* Cell content padding */
+    text-align: left; /* Text alignment in cells */
+    transition: color 0.5s; /* Smooth color transition */
+}
+
+th {
+    background-color: #f0f0f0; /* Background color for headers */
+    position: relative; /* Positioning for ::after pseudo-element */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+th.sortable:hover {
+    background-color: #b237ff;
+    transition: color 0.4s;
+    color: #fff;
+    transition: background-color 0.7s;
+}
+
+th::after {
+    content: '▼'; /* Content for ::after pseudo-element (down arrow symbol) */
+    display: inline-block; /* Change to block element */
+    position: absolute; /* Absolute positioning */
+    top: calc(50% - 6px); /* Center vertically */
+    right: 5px; /* Position from right of header */
+    font-size: 0.9em; /* Symbol size */
+    color: transparent; /* Make symbol initially invisible */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+th.sortable:hover::after,
+th.sortable:active::after {
+    color: #fff; /* Change symbol color on hover and active */
+    transition: color 0.3s;
+}
+
+th.sortable:active {
+    color: #000; /* Change text color on click */
+}
+
+/* Search container styles */
+.search-container {
+    margin-top: 20px; /* Top margin */
+    margin-bottom: 20px; /* Bottom margin */
+}
+
+/* Input field styles */
+.search-container input[type="text"] {
+    width: 100%; /* Input field width fills container */
+    padding: 10px; /* Padding */
+    border: 1px solid #ccc; /* Field border */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Include border and padding in width */
+    transition: border-color 0.3s ease; /* Smooth border color transition */
+}
+
+/* Hover styles for input field */
+.search-container input[type="text"]:hover {
+    border-color: #4caf50; /* Change border color on hover */
+}
+
+/* Focus styles for input field */
+.search-container input[type="text"]:focus {
+    outline: none; /* Remove default focus outline */
+    border-color: #4caf50; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* Add shadow on focus */
+}

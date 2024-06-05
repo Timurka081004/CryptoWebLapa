@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crypto Currency Website Main Page</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" type="text/css" href="styles_main.css">
+</head>
+<body>
+    <header>
+        <!-- Interface with logo and buttons -->
+        <div class="logo">
+            <a href="CryptoWebLapa.html">
+                <img src="Crypto_Info_Logo.png" alt="Crypto Logo">
+            </a>
+        </div>
+        <h2>Crypto Info!</h2>
+        <nav class="navbar">
+            <ul>
+                <li><a href="CryptoWebLapa.html" onclick="navigateWithAnimation(event)">Home</a></li>
+                <li><a href="CryptoUserLapa.html" onclick="navigateWithAnimation(event)">User</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="cryptoSearch" placeholder="Search by name...">
+    </div>
+
+    <div id="lastUpdate"></div> <!-- Element to display last update time -->
+
+    <div class="main-container" id="test">
+        <!-- Placeholder for cryptocurrencies data -->
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+        function navigateWithAnimation(event) {
+            event.preventDefault(); // Prevent default link behavior
+            document.body.classList.add('page-fade-out'); // Add fade-out animation class
+            setTimeout(() => {
+                window.location.href = event.target.href; // Redirect to the target page after animation
+            }, 500); // Adjust the timeout to match your CSS animation duration
+        }
+    </script>
+</body>
+</html>

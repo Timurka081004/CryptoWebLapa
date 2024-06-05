@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crypto Currency Website User Page</title>
+    <!-- Links to CSS and JavaScript -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Interface with logo and buttons -->
+        <div class="logo">
+            <a href="CryptoWebLapa.html">
+                <img src="Crypto_Info_Logo.png" alt="Crypto Logo">
+            </a>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="CryptoWebLapa.html" onclick="navigateWithAnimation(event)">Home</a></li>
+                <li><a href="CryptoUserLapa.html" onclick="navigateWithAnimation(event)">User</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Main container with user information and password change form -->
+    <div class="main-container">
+        <div class="user-info">
+            <h2>Username:</h2>
+            <h3 id="currentUsername">JohnDoe</h3>
+            <h2>Current Password:</h2>
+            <h3 id="currentPassword">******</h3>
+        </div>    
+
+        <!-- Form to change Password -->
+        <div class="change-forms">
+            <form id="changePasswordForm">
+                <input type="password" id="currentPasswordInput" placeholder="Current Password">
+                <input type="password" id="newPassword" placeholder="New Password">
+                <button type="submit">Change Password</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+    <script>
+        function navigateWithAnimation(event) {
+            event.preventDefault(); // Prevent default link behavior
+            document.body.classList.add('page-fade-out'); // Add fade-out animation class
+            setTimeout(() => {
+                window.location.href = event.target.href; // Redirect to the target page after animation
+            }, 500); // Adjust the timeout to match your CSS animation duration
+        }
+    </script>
+</body>
+</html>

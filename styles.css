@@ -1,0 +1,145 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Header styles */
+header {
+    width: 100%;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    width: 120px; /* Increase logo width */
+    height: auto;
+    border-radius: 50%; /* Add circular border */
+    border: 2px solid #fff; /* Set white border */
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+    transform: scale(1.1);
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #4caf50;
+}
+
+/* Main content styles */
+.main-container {
+    margin-top: 70px; /* Adjusted margin to make space for the header */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* User info styles */
+.user-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.user-info h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Form container styles */
+.change-forms {
+    margin-top: 20px;
+}
+
+.change-forms form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.change-forms input[type="password"],
+.change-forms button[type="submit"] {
+    margin-top: 10px;
+    width: 100%; /* Set input field width equal to buttons */
+}
+
+/* Button styles */
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Link styles */
+a {
+    color: blue;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #4caf50;
+}
+
+/* CSS code for the input field */
+input[type="password"]:focus,
+input[type="text"]:focus,
+input[type="email"]:focus {
+    background: #f0f0f0;
+    border: 1px solid #000;
+    color: #fff; /* Text color */
+    outline: none; /* Remove default focus outline */
+}
+
+/* Additional styling for the input field */
+input[type="password"],
+input[type="text"],
+input[type="email"] {
+    width: 100%; /* Set input field width equal to buttons */
+    padding: 10px; /* Add padding inside the input field */
+    border-radius: 5px; /* Add border radius to make it rounded */
+    border: 1px solid #000; /* Add a border to the input field */
+    transition: all 0.3s; /* Add transition for smooth effect */
+}
